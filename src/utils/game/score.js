@@ -11,7 +11,7 @@ export function getScore(distance, difficulty, time, mode) {
                 //6000000 : 4852 en 3 minutes à 0m
                 //800000 : 4303 en 3 minutes à 0m
                 return Math.round(
-                    getScoreNormal(distance, difficulty) * Math.exp(-time / 800000)
+                    getScoreNormal(distance, difficulty) * Math.exp((60000 - time) / 800000)
                 );
             }
 
