@@ -4,7 +4,9 @@ export function getScore(distance, difficulty, time, mode) {
     switch (mode) {
         case SCORE_MODE.TIME:
             return Math.round(
-                getScoreNormal(distance, difficulty) * Math.exp(-time / 6000000)
+                //6000000 : 4852 en 3 minutes à 0m
+                //1200000 : 4303 en 3 minutes à 0m
+                getScoreNormal(distance, difficulty) * Math.exp(-time / 1200000)
             );
 
         default:
