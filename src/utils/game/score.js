@@ -3,11 +3,17 @@ import { SCORE_MODE } from '../../constants';
 export function getScore(distance, difficulty, time, mode) {
     switch (mode) {
         case SCORE_MODE.TIME:
-            return Math.round(
+            //Score pour 3 minutes
+            if(time < 60000){
+                //Tous les points si on prend moins de 1 minutes
+                return getScoreNormal(distance, difficulty);
+            }else{
                 //6000000 : 4852 en 3 minutes à 0m
-                //1200000 : 4303 en 3 minutes à 0m
-                getScoreNormal(distance, difficulty) * Math.exp(-time / 1200000)
-            );
+                //800000 : 4303 en 3 minutes à 0m
+                return Math.round(
+                    getScoreNormal(distance, difficulty) * Math.exp(-time / 800000)
+                );
+            }
 
         default:
             return getScoreNormal(distance, difficulty);
