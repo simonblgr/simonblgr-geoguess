@@ -132,7 +132,7 @@
   },
   "DialogRoom": {
     "singlePlayer": "Un joueur",
-    "withFriends": "Avec des amis",
+    "withFriends": "Avec des collègues",
     "invalidRoomName": "Nom invalide. Veuillez en choisir un autre.",
     "inProgress": "Le premier joueur est en train de créer la salle. Veuillez patienter puis recommencer.",
     "roomIsFull": "La salle est déjà pleine. Essayez une autre.",
